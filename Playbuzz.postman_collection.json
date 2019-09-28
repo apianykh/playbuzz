@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "b08f9093-1e00-4e86-8aeb-bff253654905",
+		"name": "Playbuzz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Collect",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "page-id",
+							"value": "some_page_id",
+							"type": "text"
+						},
+						{
+							"key": "user-id",
+							"value": "some_user_id",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://playbuzz.arpygv.space/collect",
+					"protocol": "https",
+					"host": [
+						"playbuzz",
+						"arpygv",
+						"space"
+					],
+					"path": [
+						"collect"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Page Views",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "6i2nSgWu0DfYIE8I0ZBJOtxTmHJATRzu",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://playbuzz.arpygv.space/page-views",
+					"protocol": "https",
+					"host": [
+						"playbuzz",
+						"arpygv",
+						"space"
+					],
+					"path": [
+						"page-views"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Page Views By Browser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "6i2nSgWu0DfYIE8I0ZBJOtxTmHJATRzu",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://playbuzz.arpygv.space/page-views/by-browser",
+					"protocol": "https",
+					"host": [
+						"playbuzz",
+						"arpygv",
+						"space"
+					],
+					"path": [
+						"page-views",
+						"by-browser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Page Views By Country",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "6i2nSgWu0DfYIE8I0ZBJOtxTmHJATRzu"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://playbuzz.arpygv.space/page-views/by-country",
+					"protocol": "https",
+					"host": [
+						"playbuzz",
+						"arpygv",
+						"space"
+					],
+					"path": [
+						"page-views",
+						"by-country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users Visits",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "6i2nSgWu0DfYIE8I0ZBJOtxTmHJATRzu"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://playbuzz.arpygv.space/users-rate",
+					"protocol": "https",
+					"host": [
+						"playbuzz",
+						"arpygv",
+						"space"
+					],
+					"path": [
+						"users-rate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
