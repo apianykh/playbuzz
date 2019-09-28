@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+
+  mongo:
+    image: mongo:4.2-bionic
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: snappy_db
+    ports:
+      - 27017:27017
+    volumes:
+      - ./docker_files/volumes/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./docker_files/volumes/mongo:/data/db
+
+  app:
+    build:
+      context: .
+      dockerfile: ./docker_files/Dockerfile
+    depends_on:
+      - mongo
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      DSN: mongodb://mongo:27017
