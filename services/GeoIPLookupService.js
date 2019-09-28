@@ -4,7 +4,7 @@ const DB = path.resolve(__dirname, './../geoip_db/GeoLite2-Country.mmdb');
 
 module.exports = async (req) => 
 {
-  const client_ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  const client_ip = req.headers['x-real-ip'] || req.connection.remoteAddress;
   const reader = await Geoip2Reader.open(DB);
   try {
     const { country: { isoCode } } = reader.country(client_ip);
